@@ -1,0 +1,23 @@
+body{
+    background: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 ;
+    background-size: 100% cover ;
+    overflow:hidden;
+    display: block;
+} 
+
+.homePage{
+    position: fixed;
+    left: 45%;
+    top: 50%;
+}
+.mainBtn{
+    background-color: #f0c000;
+    color: black;
+    padding: 10px 10px;
+    margin-left: 10px;
+}

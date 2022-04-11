@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+.headerBtn{
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    float: right;
+    padding: 5px 5px;
+    margin: 5px 5px 3px 3px;
+    
+}
+
+.logo-title{
+    font-family: "Satisfy", "cursive";
+    color: blue;
+    margin-left: 5px;
+}
+.middleText{
+    font-family: "Marck Script",'Satisfy', 'cursive';
+    margin-left: 5px;
+}
+#pageTitle{
+    font-size: 2rem;
+}
+.middleText{
+    font-size: 1rem;
+}
