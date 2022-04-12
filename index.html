@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 
+    <!-- css -->
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header.css">
 
@@ -18,17 +19,50 @@
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
     <div class="header">
-        <button class="headerBtn" id="signIn">Sign In</button>
-        <button class="headerBtn" id="signUp">Sign Up</button>
-        <a id="pageTitle" class="logo-title">SnipPic</a>
-        <p class="middleText">Share Happiness!</p>
+        <button class="headerBtn" id="signUp" onclick="signUpFn()">Sign Up</button>
+        <button class="headerBtn" id="signIn" onclick="signInFn()">Sign In</button>
+        <a class="logo-title">ScriBBler</a>
+        <p class="middleText">Explore. Imagine. Create</p>
+
+        <div class="signInModel" >
+            <div class="modal-contentIn">
+                <span class="inClose close">&times;</span>
+                <p id="pHeading">Welcome Back!</p>
+                <hr>
+                <p class="text">Username</p>
+                <input type="text" class="inputField" required placeholder="Enter Username">
+                <p class="text">Password</p>
+                <input type="password" class="inputField" required placeholder="Enter Password">
+                <button id="signInBtn" class="signBtn" >Sign In</button>
+                <div id="someText">
+                    <span id="notM">Not a member?</span> <span id="blueText">Sign Up</spa>
+                </div>
+            </div> 
+        </div>
+
+        <div class="signUpModel" >
+            <div class="modal-contentUp">
+                <span class="upClose close">&times;</span>
+                <p id="pHeading">Get Started</p>
+                <hr>
+                <p class="text" >Full Name</p>
+                <input type="text" class="inputField" required placeholder="Enter Full Name">
+                <p class="text">Username</p>
+                <input type="text" class="inputField" required placeholder="Enter Username">
+                <p class="text">Password</p>
+                <input type="password" class="inputField" required placeholder="Enter Password">
+                <p class="text">Confirm Password</p>
+                <input type="password" class="inputField" required placeholder="Confirm Password">
+                <button id="signUpBtn" class="signBtn" >Sign Up</button>
+            </div> 
+        </div>
     </div> 
 
     <div class="homePage">
         <button class="mainBtn" id="allPosts">All Posts</button>
         <button class="mainBtn" id="createPost">Create Post</button>
     </div>
-    
-</body>
 
+</body>
+<script src="/js/header.js"></script>
 </html>
