@@ -24,45 +24,83 @@
         <a class="logo-title">ScriBBler</a>
         <p class="middleText">Explore. Imagine. Create</p>
 
-        <div class="signInModel" >
-            <div class="modal-contentIn">
-                <span class="inClose close">&times;</span>
-                <p id="pHeading">Welcome Back!</p>
-                <hr>
-                <p class="text">Username</p>
-                <input type="text" class="inputField" required placeholder="Enter Username">
-                <p class="text">Password</p>
-                <input type="password" class="inputField" required placeholder="Enter Password">
-                <button id="signInBtn" class="signBtn" >Sign In</button>
-                <div id="someText">
-                    <span id="notM">Not a member?</span> <span id="blueText">Sign Up</spa>
-                </div>
-            </div> 
-        </div>
+        <form>
+            <div class="signInModel" >
+                <div class="modal-contentIn">
+                    <span class="inClose close">&times;</span>
+                    <p id="pHeading">Welcome Back!</p>
+                    <hr>
+                    
+                    <label for="usernameField" class="text">Username</label>
+                    <input type="text" id="usernameField" class="inputField" placeholder="Enter Username" required>
+                    
+                    <label for="passwordField" class="text">Password</label>
+                    <input type="password" id="passwordField" class="inputField" placeholder="Enter Password" required>
+                    
+                    <input type="submit" id="signInBtn" class="signBtn" value="Sign In">
+                    
+                    <div id="someText">
+                        <span id="notM">Not a member?</span> <span id="blueText">Sign Up</spa>
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
 
-        <div class="signUpModel" >
-            <div class="modal-contentUp">
-                <span class="upClose close">&times;</span>
-                <p id="pHeading">Get Started</p>
-                <hr>
-                <p class="text" >Full Name</p>
-                <input type="text" class="inputField" required placeholder="Enter Full Name">
-                <p class="text">Username</p>
-                <input type="text" class="inputField" required placeholder="Enter Username">
-                <p class="text">Password</p>
-                <input type="password" class="inputField" required placeholder="Enter Password">
-                <p class="text">Confirm Password</p>
-                <input type="password" class="inputField" required placeholder="Confirm Password">
-                <button id="signUpBtn" class="signBtn" >Sign Up</button>
-            </div> 
-        </div>
+        <form>
+            <div class="signUpModel" >
+                <div class="modal-contentUp">
+                    <span class="upClose close">&times;</span>
+                    <p id="pHeading">Get Started</p>
+                    <hr>
+                    
+                    <label for="nameField" class="text">Full Name</label>
+                    <input type="text" id="nameField" class="inputField" placeholder="Enter Full Name" required>
+                    
+                    <label for="usernameField" class="text">Username</label>
+                    <input type="text" id="usernameField" class="inputField" placeholder="Enter Username" required>
+                    
+                    <label for="passwordField" class="text">Password</label>
+                    <input type="password" id="passwordField" class="inputField" placeholder="Enter Password" required>
+                    
+                    <label for="confirmField" class="text">Confirm Password</label>
+                    <input type="password" id="confirmField" class="inputField" placeholder="Confirm Password" required>
+                    
+                    <input type="submit" id="signUpBtn" class="signBtn" value="Sign Up">
+                    
+                </div> 
+            </div>
+        </form>
+
     </div> 
 
     <div class="homePage">
-        <button class="mainBtn" id="allPosts">All Posts</button>
-        <button class="mainBtn" id="createPost">Create Post</button>
+
+        <button class="mainBtn" id="allPosts" onclick="allPost()" >All Posts</button>
+        <button class="mainBtn" id="createPost" onclick="createFn()">Create Post</button>
+        
+        <form>
+            <div class="createPostModel" >
+                <div class="modal-contentPost">
+                    <span class="createClose">&times;</span>
+                    <p id="pHeading">Pen Your Post</p>  
+                    
+                    <label for="titleField" class="textt">Title:</label><br>
+                    <input type="text" id="titleField" class="titleField" required><br>
+
+                    <label for="textarea" class="textt">Content:</label><br>
+                    <textarea name="textarea" id="textarea" ></textarea>
+                    <div id="btnDiv">
+                        <input type="submit" id="createBtn" class="signBtnn" value="Create">
+                    </div>
+                    
+                </div> 
+            </div>
+        </form>
+
     </div>
 
 </body>
 <script src="/js/header.js"></script>
+<script src="./js/index.js"></script>
 </html>
