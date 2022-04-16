@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-
-    <!-- TODO: Include Google Fonts file here -->
-
-    <link rel = "preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-
-    <!-- css -->
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/header.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bloglist.css">
+    <link rel="stylesheet" href="/css/post.css">
+    <script src="https://kit.fontawesome.com/ce4fdba713.js" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
-
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
     <div class="header">
         <button class="headerBtn" id="signUp" onclick="signUpFn()">Sign Up</button>
         <button class="headerBtn" id="signIn" onclick="signInFn()">Sign In</button>
         <a class="logo-title">ScriBBler</a>
-        <p class="middleText">Explore. Imagine. Create</p>
+        <p class="middleTexttt">Explore. Imagine. Create</p>
 
         <form>
             <div class="signInModel" >
@@ -40,8 +32,7 @@
                     <input type="submit" id="signInBtn" class="signBtn" value="Sign In">
                     
                     <div id="someText">
-                        <span id="notM">Not a member?</span> 
-                        <a><span id="blueText">Sign Up</span></a>
+                        <span id="notM">Not a member?</span> <span id="blueText">Sign Up</spa>
                     </div>
                     
                 </div> 
@@ -73,35 +64,43 @@
             </div>
         </form>
 
-    </div> 
-
-    <div class="homePage">
-
-        <button class="mainBtn" id="allPosts" onclick="allPost()" >All Posts</button>
-        <button class="mainBtn" id="createPost" onclick="createFn()">Create Post</button>
-        
-        <form>
-            <div class="createPostModel" >
-                <div class="modal-contentPost">
-                    <span class="createClose">&times;</span>
-                    <p id="pHeading">Pen Your Post</p>  
-                    
-                    <label for="titleField" class="textt">Title:</label><br>
-                    <input type="text" id="titleField" class="titleField" required><br>
-
-                    <label for="textarea" class="textt">Content:</label><br>
-                    <textarea name="textarea" id="textarea" ></textarea>
-                    <div id="btnDiv">
-                        <input type="submit" id="createBtn" class="signBtnn" value="Create">
-                    </div>
-                    
-                </div> 
-            </div>
-        </form>
-
     </div>
+    <!-- Blog Post -->
+    
+    <div class="post-wrapper">
+        <p class="post-title" id="postTitle">abcd</p>
+        <div class="author-edit-text">
+          <span id="author">Author</span>
+          <button class="btn btn-danger saved btn-common" id="editPost">
+            Edit <i class="fa fa-edit"></i>
+          </button>
+        </div>
+        <p class="post-content" id="postContent">
+          lorem ipsum
+        </p>
+        <div class="like-wrapper">
+          <button  onclick="LikeButton()" class="btn btn-danger like-button btn-common">
+            <i  class="fa fa-thumbs-up"></i>
+            <span id="liked">Like </span>
+            
+          </button>
+          <p id="likeText">Be the first one to like this!</p>
+        </div>
+        <div class="comments-wrapper">
+          <textarea
+            name="comments"
+            id="commentBox"
+            placeholder="Leave a comment..."
+          ></textarea>
+          <button class="btn btn-danger comment-button btn-common" onclick="addcmt(commentBox)">
+            Comment
+          </button>
+          <p class="all-comments">All Comments</p>
+          <div id="comments-wrapper"></div>
+        </div>
+      </div>
+</div>
 
 </body>
-<script src="/js/header.js"></script>
-<script src="./js/index.js"></script>
+<script src="../js/post.js"></script>
 </html>
