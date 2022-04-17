@@ -39,42 +39,40 @@ var flag=0;
 var likee=0;
 
 
-function changeText(){
+function changeText()
+{
+if(flag==0)
+{
+    var a=document.getElementById("blogBody").innerHTML;
+     var x=document.getElementById("temp").innerHTML;
+    document.getElementById("text").innerHTML='Save';
+    document.getElementById("text2").innerHTML=x;
+    document.getElementById("textarea").value=a;
+    document.getElementById("blogBody").style.display="none";
+    document.getElementById("textarea").style.display="block";
+    document.getElementById("textarea").style.width="95%";
+    document.getElementById("textarea").style.height="260px";
 
-    if(flag==0){
-
-        var a=document.getElementById("Content").innerHTML;
-        var x=document.getElementById("temp").innerHTML;
-        document.getElementById("text").innerHTML='Save';
-        document.getElementById("text2").innerHTML=x;
-        document.getElementById("textarea").value=a;
-        document.getElementById("Content").style.display="none";
-        document.getElementById("textarea").style.display="block";
-        document.getElementById("textarea").style.width="95%";
-        document.getElementById("textarea").style.height="260px";
-
-        var title=document.getElementById("blogTitleNew").innerHTML;
-        document.getElementById("titleArea").value=title;
-        document.getElementById("Title").style.display="none";
+    var title=document.getElementById("blogTitleNew").innerHTML;
+		document.getElementById("titleArea").value=title;
+		document.getElementById("blogTitleNew").style.display="none";
         document.getElementById("titleArea").style.display="block";
         flag=1;
-
-    }else{
-
-        var c = document.getElementById("textarea").value;
-        document.getElementById("Content").innerHTML=c;
-        document.getElementById("Content").style.display="block";
-        document.getElementById("textarea").style.display="none";
-        var d=document.getElementById("titleArea").value;
-        document.getElementById("Title").innerHTML=d;
-        document.getElementById("Title").style.display="block";
-        document.getElementById("titleArea").style.display="none";
-        var d=document.getElementById("temp2").innerHTML;
-        document.getElementById("text").innerHTML='Edit';
-        document.getElementById("text2").innerHTML=d;
-        flag=0;
-
-    }
+}
+else{
+    var c = document.getElementById("textarea").value;
+    document.getElementById("blogBody").innerHTML=c;
+    document.getElementById("blogBody").style.display="block";
+    document.getElementById("textarea").style.display="none";
+    var d=document.getElementById("titleArea").value;
+    document.getElementById("blogTitleNew").innerHTML=d;
+    document.getElementById("blogTitleNew").style.display="block";
+    document.getElementById("titleArea").style.display="none";
+    var d=document.getElementById("temp2").innerHTML;
+    document.getElementById("text").innerHTML='Edit';
+    document.getElementById("text2").innerHTML=d;
+    flag=0;
+}
 }
 
 likeButton.onclick = function(){

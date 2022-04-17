@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 body{
     background-color: white;
@@ -31,17 +32,7 @@ body{
     font-weight: 500;
 }
 
-.editBtn{
-    
-    border-radius: 0;
-    border: none;
-    width: 80px;
-    height: 40px;
-    background-color: red;
-    color: white;
-    box-shadow: 0px 7px 20px rgba(255, 0, 0, 0.4);
-    cursor: pointer;
-}
+
 
 .editIcon{
     margin-left: 5px;
@@ -69,6 +60,7 @@ body{
 #likeText {
     margin-top: 5px;
     margin-bottom: 40px;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 .commentBtn {
@@ -251,5 +243,62 @@ body{
 .close:focus {
     color: black;
     text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* ----------------------------------------------------------------------- */
+.blogTite {
+    font-size: 150%;
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.blogText {
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.blogAuthor {
+    padding: 0px 0px 0px 10px;
+    font-family: 'Niconne', cursive;
+    font-size: 30px;
+    display: flex;
+	justify-content: space-between;
+}
+
+#edit{
+	display: flex;
+	justify-content: space-around;
+	text-decoration: none;
+	color: white;
+	font-family: serif;
+	font-size: 19px;
+	border: 1px solid pink;
+	height: 30px;
+	width: 75px;
+	background-color: red;
+	text-align: center;
+	padding-top: 6px;
+}
+#commentBox button{
+	height: 35px;
+	width: 95px;
+	margin-top: 5px;
+	background-color: red;
+	border: 0px;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+/* Set a style for all the remaining elements like Like button, Edit button, Comment button and so on. */
+.editBtn{
+    
+    border-radius: 0;
+    border: none;
+    width: 80px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    box-shadow: 0px 7px 20px rgba(255, 0, 0, 0.4);
     cursor: pointer;
 }

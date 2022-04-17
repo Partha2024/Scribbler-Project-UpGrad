@@ -79,3 +79,14 @@ notMember.onclick = () => {
 threeDot.onclick = () => {
     location.href = "../html/post.html"
 }
+
+
+function viewPostDetails(id) {
+    var post = document.getElementById(id);
+    var author = post.querySelector(".postName").innerHTML;
+    var title = post.querySelector(".postTitle").innerHTML;
+    var content = post.querySelector(".post-desc").innerHTML;
+    var postUrl = "post.html?author=" + author + "&title=" + title + "&content=" + content;
+    window.location.href = postUrl;
+    console.log(postUrl);
+}
