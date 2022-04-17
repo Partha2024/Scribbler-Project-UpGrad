@@ -44,7 +44,7 @@ function changeText()
 if(flag==0)
 {
     var a=document.getElementById("blogBody").innerHTML;
-     var x=document.getElementById("temp").innerHTML;
+    var x=document.getElementById("temp").innerHTML;
     document.getElementById("text").innerHTML='Save';
     document.getElementById("text2").innerHTML=x;
     document.getElementById("textarea").value=a;
